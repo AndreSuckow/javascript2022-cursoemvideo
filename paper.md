@@ -19,37 +19,22 @@ dicas para aprender:
 ## MÓDULO B - AULA 2
 
 1. Sabe a diferença entre um cliente e um servidor para Internet?
---- client side: tecnologias front-end que fazem requisições para acessar/baixar,etc o conteúdo que está armazenado em algum servidor.
---- server side: tecnologias back-end que armazenam o conteúdo que o cliente quer acessar.
+⋅⋅⋅ client side: tecnologias front-end que fazem requisições para acessar/baixar,etc o conteúdo que está armazenado em algum servidor.
+⋅⋅⋅ server side: tecnologias back-end que armazenam o conteúdo que o cliente quer acessar.
 
 2. HTML/CSS/JS - para que servem, como funcionam?
---- HTML: linguagem de marcação de texto, cria o esqueleto do que vai ser colocado no conteúdo da página da internet.
---- CSS: linguagem que coloca cores, modifica posicionamento de elementos, define tamanho de letras, imagens, ícones, etc. Tudo que é estilo, o css alcança.
---- JS: se seu site está interativo, como cliques executando funcionalidades, é muito provável que o site esteja rodando javascript do lado clientside.
+⋅⋅⋅ HTML: linguagem de marcação de texto, cria o esqueleto do que vai ser colocado no conteúdo da página da internet.
+⋅⋅⋅ CSS: linguagem que coloca cores, modifica posicionamento de elementos, define tamanho de letras, imagens, ícones, etc. Tudo que é estilo, o css alcança.
+⋅⋅⋅ JS: se seu site está interativo, como cliques executando funcionalidades, é muito provável que o site esteja rodando javascript do lado clientside.
 
 3. Sites grandes que utilizam Javascript em seu site?
---- Google;
---- Youtube;
---- LinkedIn;
+⋅⋅⋅ Google;
+⋅⋅⋅ Youtube;
+⋅⋅⋅ LinkedIn;
 
 
 ### Iniciando a aula:
 
 1970 - meados de 1970 (criação da internet)
 
-Inline `code` has `back-ticks around` it.
 
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
- 
-```python
-s = "Python syntax highlighting"
-print s
-```
- 
-```
-No language indicated, so no syntax highlighting. 
-But let's throw in a <b>tag</b>.
-```
