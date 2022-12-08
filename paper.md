@@ -41,5 +41,3 @@ dicas para aprender:
 ### Iniciando a aula:
 
 1970 - meados de 1970 (criação da internet)
-
-
