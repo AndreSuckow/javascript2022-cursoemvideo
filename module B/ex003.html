@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 002 - armazenando dados em variáveis e concatenação</title>
+</head>
+<body>
+    <script>
+      var number1 = window.prompt('Digite o primeiro número.') // recebe dado da primeira variável.
+      var number2 = Number(window.prompt('Digite o segundo número')) // recebe dado da segunda variável.
+      var result = number1 + number2 // cria uma variável aonde a soma dos dados ficam armazenados.
+      window.alert('O resultado dessa soma é: ' + result + '.') // concatena variáveis e informa o resultado.
+
+      // abrindo o f12, olhando o console e vendo o tipo da variável.
+        console.log('o tipo da variável number1 é: ' + typeof number1)
+        console.log('o tipo da variável number2 é: ' + typeof number2)
+        console.log('o tipo da variável result é: ' + typeof result)
+
+      /* 
+
+      "var result = number1 + number2" - O + tem duas funções dentro do javascript.
+
+        concatenação ou soma.
+
+        o window.prompt por default retorna uma string no tipo de dado mesmo que seja digitado um número.
+        se o número é entendido como uma cadeia de caracteres, o programa pensa que é para concatenar e não somar.
+
+      se um ou mais tipos de dados informados, armazenados nas variáveis em uma soma aritmética for string, o resultado da soma será string. Portanto se precisarmos fazer somas, precisamos alterar o tipo do dado String para Number.
+      */
+
+      var number1fix = Number(window.prompt('informe o primeiro número novamente.'))
+      var number2fix = Number(window.prompt('informe o segundo número.'))
+      var resultFix = number1fix + number2fix
+      console.log('o tipo da variável number1fix é: ' + typeof number1fix)
+      console.log('o tipo da variável number2fix é: ' + typeof number2fix)
+      console.log('o tipo da variável resultFix é: ' + typeof resultFix)
+      window.alert('o resultado correto é: ' + resultFix + ".")
+    </script>
+</body>
+</html>
