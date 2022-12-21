@@ -64,4 +64,6 @@ acesse: https://262.ecma-international.org/6.0/ (ECMA SCRIPT 6.0 DO ANO DE 2015)
 
 ## MÓDULO A - AULA 4 - Criando o seu primeiro script
 
-escrever "olá mundo" na web.
+    window.alert('Minha primeira mensagem')
+    window.confirm('está gostando de javascript?')
+    window.prompt('qual é o seu nome?')
