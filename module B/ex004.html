@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var username = window.prompt('Qual seu nome?')
+        window.document.write(`Seu nome tem ${username.length} letras.<br>`) // quantidade da letras na variável (ele também conta os espaços caso digite nome completo.)
+
+        // aprimorando um pouco ficaria:
+
+        var username2 = window.prompt('Qual seu nome?')
+        window.document.write(`Olá, <strong>${username2}</strong>! Seu nome tem ${username2.length} letras.<br>`)
+        window.document.write(`Seu nome em letras maiúsculas é ${username2.toUpperCase()}.<br>`)
+        window.document.write(`Seu nome em minúsculas é ${username2.toLowerCase()}.`)
+
+        var n1 = 1545.5 // declara variável com identificador de nome "n1" e informa que ela recebe um dado do tipo number(float).
+        n1 = n1.toFixed(2).replace('.', ',')  // fixa o valor de casas decimais depois da virgula em 2 / substitui ponto por virgula.
+        console.log(n1)
+        
+
+        var salary = 1850.9
+        console.log(salary)
+        salary = salary.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) // formata para informar cifrão R$, se quiser transformar para DOLLAR troca pra 'USD' ao invés do 'BRL' ou 'EUR' para euro.
+        document.write(salary)
+    </script>
+</body>
+</html>

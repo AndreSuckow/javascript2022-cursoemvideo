@@ -242,9 +242,135 @@ CONCATENAÇÃO: Concatenar é uma palavra que significa "colocar junto". Para co
 ```Javascript
 var nameUser = window.prompt('Qual é o seu nome?')
 window.alert('É um prazer em te conhecer, ' + nameUser + '.')
+
+var number1 = window.prompt('Digite o primeiro número.') // recebe dado da primeira variável.
+var number2 = Number(window.prompt('Digite o segundo número')) // recebe dado da segunda variável.
+var result = number1 + number2 // cria uma variável aonde a soma dos dados ficam armazenados.
+window.alert('O resultado dessa soma é: ' + result + '.') // concatena variáveis e informa o resultado.
+
+// abrindo o f12, olhando o console e vendo o tipo da variável.
+console.log('o tipo da variável number1 é: ' + typeof number1)
+console.log('o tipo da variável number2 é: ' + typeof number2)
+console.log('o tipo da variável result é: ' + typeof result)
+
+/* 
+
+"var result = number1 + number2" - O + tem duas funções dentro do javascript.
+
+concatenação ou soma.
+
+o window.prompt por default retorna uma string no tipo de dado mesmo que seja digitado um número.
+se o número é entendido como uma cadeia de caracteres, o programa pensa que é para concatenar e não somar.
+
+se um ou mais tipos de dados informados, armazenados nas variáveis em uma soma aritmética for string, o resultado da soma será string. Portanto se precisarmos fazer somas, precisamos alterar o tipo do dado String para Number.
+
+*/
+
+var number1fix = Number(window.prompt('informe o primeiro número novamente.')) // Convertendo antes de armazenar o valor na variável
+var number2fix = Number(window.prompt('informe o segundo número.')) // Convertendo antes de armazenar o valor na variável
+var resultFix = number1fix + number2fix
+console.log('o tipo da variável number1fix é: ' + typeof number1fix)
+console.log('o tipo da variável number2fix é: ' + typeof number2fix)
+console.log('o tipo da variável resultFix é: ' + typeof resultFix)
+window.alert('o resultado correto é: ' + resultFix + ".")
+
+// seria possível também ao invés de usar o Number, usar o Number.parseInt(n) ou Number.parseFloat(n) ... inteiros e numeros reais
+
+// é possível também converter o contrário, da seguinte forma:
+      
+var numero = Number(window.prompt('informe um número.'))
+numero = numero.toString() // transformando para tipo string ou String(numero)
+console.log(typeof numero)
+```
+Formatando Strings: (node)
+
+```node.js
+> var s = 'JavaScript'
+undefined
+> s
+'JavaScript'
+> 'Eu estou estudando s'
+'Eu estou estudando s'
+> 'Eu estou estudando ' + s
+'Eu estou estudando JavaScript'
+> nome = 'André'
+'André'
+> idade = 32
+32
+> nota = 5.5
+5.5
+> nome
+'André'
+> idade
+32
+> nota
+5.5
+> 'O aluno ' + nome + ' com ' + idade + ' anos tirou a nota ' + nota + '.'
+'O aluno André com 32 anos tirou a nota 5.5.'
+> `O aluno ${nome} com ${idade} anos tirou a nota ${nota}.`
+'O aluno André com 32 anos tirou a nota 5.5.'
 ```
 
+## APRENDENDO NOMES CORRETOS ##
+
+```javaScript
+    var linguagem = 'JavaScript'
+    var frase1 = 'Eu estou aprendendo linguagem' // não faz interpolação
+    var frase2 = 'Eu estou aprendendo ' + linguagem // usa concatenação
+    var frase3 = `Eu estou aprendendo ${linguagem}` // usa template string com placeholder pra armazenar variáveis dentro.
+
+     var username = window.prompt('Qual seu nome?')
+    window.document.write(`Seu nome tem ${username.length} letras.<br>`) // quantidade da letras na variável (ele também conta os espaços caso digite nome completo.)
+    // aprimorando um pouco ficaria:
+    var username2 = window.prompt('Qual seu nome?')
+    window.document.writeln(`Olá, <strong>${username2}</strong>! Seu nome tem ${username2.length} letras.<br>`)
+    window.document.writeln(`Seu nome em letras maiúsculas é ${username2.toUpperCase()}.<br>`)
+    window.document.writeln(`Seu nome em minúsculas é ${username2.toLowerCase()}.`)
+    var n1 = 1545.5 // declara variável com identificador de nome "n1" e informa que ela recebe um dado do tipo number(float).
+    n1 = n1.toFixed(2).replace('.', ',')  // fixa o valor de casas decimais depois da virgula em 2 / substitui ponto por virgula.
+    console.log(n1)
+    
+    var salary = 1850.9
+    salary = salary.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) // formata para informar cifrão R$, se quiser transformar para DOLLAR troca pra 'USD' ao invés do 'BRL' ou 'EUR' para euro.
+    console.log(salary)
+```
+
+
 ## MÓDULO B - AULA 7 - Operadores (Parte 1)
+
+Q01. Como é possível guardar o valor digitado no prompt() dentro de uma variável?
+r: 
+```javascript
+    var dado_passado = window.document.prompt('informe o valor do dado')
+    console.log(dado_passado)
+```
+Q02. Como fazer com que um número digitado em um prompt() possa ser usado em cálculos?
+r: transformando o tipo do valor das variáveis armazenadas de string para number.
+```javascript
+    var numero1 = Number(window.document.prompt('informe numero 1'))
+    var numero2 = Number(window.document.prompt('informe numero 2'))
+    var resultado = numero1 + numero2
+    window.alert(`o resultado da operação é: ${resultado}.`)
+```
+Q03. Como transformar um texto todo para letras MAIÚSCULAS?
+r:
+```javascript
+    var textoRecebido = window.prompt('informe texto')
+    var textoCaixaAlta = textoRecebido.toUpperCase()
+    window.document.write(`o texto ficou: <strong>${textoCaixaAlta}.</strong>`)
+
+```
+Q04. Como mostrar um número formatado como um valor monetário?
+```javascript
+    var userName = window.prompt('informe seu nome.')
+    var userSalary = Number(window.prompt(`Certo, ${userName}. Agora, informe seu salário.`))
+    userSalaryBRL = userSalary.toFixed(2).replace('.',',').toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+    var BRLtoUSDSalary = userSalaryBRL / 5.26
+    var messageReturn = document.write(`O salário em real ${userSalaryBRL} convertido para Dóllar fica em ${BRLtoUSDSalary}.`)
+    
+```
 ## MÓDULO B - AULA 8 - Operadores (Parte 2)
+
+
 
 
