@@ -369,7 +369,255 @@ Q04. Como mostrar um número formatado como um valor monetário?
     var messageReturn = document.write(`O salário em real ${userSalaryBRL} convertido para Dóllar fica em ${BRLtoUSDSalary}.`)
     
 ```
+
+Operadores vistos neste curso
+
+- ARITMÉTICOS
+- ATRIBUIÇÃO
+- RELACIONAIS
+- LÓGICOS
+- TERNÁRIO
+
+
+
+OPERADORES ARITMÉTICOS:
+- operadores usados para fazer cálculo:
+
+5 + 2 = 7 (adição)
+5 - 2 = 3 (subtração)
+5 * 2 = 10 (multiplicação)
+5 / 2 = 2.5 (divisão real)
+5 % 2 = 1 (resto da divisão inteira)
+5 ** 2 = 25 (potência)
+
+Ordem de precedência:
+
+1. Parênteses ()
+2. Expoentes (potências) **
+Multiplicações e divisões; (da esquerda para a direita) * / %
+Somas e subtrações. (da esquerda para a direita) + -
+
+
+OPERADORES DE ATRIBUOÇÃO: 
+
+Autoatribuições:
+
+var n = 3 (n valendo 3)
+n = n + 4 (agora n vale 7)
+n = n -5 (agora n vale 2)
+n = n * 4 (agora n vale 8)
+n = n / 2 (agora n vale 4)
+n = n ** 2 (agora n vale 16)
+n = n % 5 (agora n vale 1)
+
+Simplificando
+
+funciona para encurtar o código e só funciona se a variável receber ela mesma, seguida de algum operador aritmédico, exemplo:
+supondo que o valor de n seja 1, no método comum temos:
+var n = 3
+n = n + 4 
+n = 7 
+
+simplficando ficaria assim:
+var n = 3
+n += 4
+n = 7
+------
+var n = 3
+n -= 5
+n = -2
+------
+var n = 3
+n *= 4
+n = 12
+------
+var n = 3
+n /= 2
+n = 1.5
+------
+var n = 3
+n **= 2
+n = 9
+------
+var n = 3
+n %= 5
+n = 3
+
+operador de incremento
+
+o normal:
+var x = 5
+x = x + 1
+
+simplificando:
+
+x += 1
+x -= 1
+
+simplicando ainda mais
+
+x ++ 
+x -- 
+
+```node.js
+(pós encremento)
+> var n = 10
+undefined
+> n++
+10
+> n
+11
+> n--
+11
+> n
+10
+>
+
+(pré encremento)
+> x = 10
+10
+> --x
+9
+> ++x
+10
+> x
+10
+>
+```
+
+
 ## MÓDULO B - AULA 8 - Operadores (Parte 2)
+
+Q01. Para que serve o operador % em JS? Seria para calcular porcentagem?
+r: não. Ele é usado para obter o valor do resto de uma divisão
+
+Q02. 6 + 4 / 2 é igual a 5 ou igual a 8?
+r: 8 divisão antes da adição, ordem de precedência.
+
+Q03. Se uma variável n está valendo 10 e executamos um n += 5, qual será o seu novo valor?
+r: n = 15
+
+```node.js
+> var n = 10
+undefined
+> n += 5
+15
+>
+```
+Q04. O que acontece quando colocamos os operadores ++ ou -- do lado de uma variável?
+r: ela soma +1 a essa variável ou -1 a essa variável.
+
+```node.js
+(pós encremento)
+> var n = 10
+undefined
+> n++
+10
+> n
+11
+> n--
+11
+> n
+10
+>
+
+(pré encremento)
+> x = 10
+10
+> --x
+9
+> ++x
+10
+> x
+10
+>
+```
+
+OPERADORES RELACIONAIS:
+
+Para toda expressão que tenha um operador relacional ligado a ela, o resultado dessa expressão sempre será um valor booleano (true or false)
+
+```javascript
+5 > 2 // 5 maior que 2 = true
+7 < 4 // 7 menor que 4 = false
+8 >= 8 // 8 maior ou igual 8 = true
+9 <= 7 // 9 menor ou igual 7 = false
+5 == 5 // 5 igual a 5 = verdadeiro
+4 != 4 // 4 não igual 4 (algo que não é igual é diferente) = false
+```
+
+Abrindo o node.js
+
+```node.js
+> 5 < 2
+false
+> 5 <= 5
+true
+> 5 >= 5
+true
+> 5 != 5
+false
+> 5 != 4
+true
+> var a = 8
+undefined
+> var b = 15
+undefined
+> a > b
+false
+> b > a
+true
+> a <= b - 10
+false
+> a == b
+false
+> a != b
+true
+```
+
+OPERADORES DE IDENTIDADE:
+
+
+
+```javascript
+
+// var x = 5 (var x recebe 5)
+// x == '5' (true, x tem o mesmo valor que '5')
+// x === '5' (false, x tem o mesmo valor que '5' mas não tem o mesmo tipo de dados (number e string))
+5 == 5 // true  
+5 == '5' // true 
+5 === '5' // false
+5 === 5 // true
+
+var a = 10
+var b = '10'
+
+a != b // false
+a !== b // true
+```
+
+```node.js
+> var a = 10
+undefined
+> var b = '10'
+undefined
+> typeof a
+'number'
+> typeof b
+'string'
+> a != b
+false
+> a !== b
+true
+```
+
+ OPERADORES LÓGICOS:
+
+ !
+ &&
+ ||
+
+
 
 
 
