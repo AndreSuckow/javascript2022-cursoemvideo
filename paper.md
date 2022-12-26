@@ -117,7 +117,7 @@ var vaga4 = null // (vaga vazia, sem nenhum carro preenchendo)
 ATRIBUIÇÃO: Armazenar determinado dado em determinada variável.
 IDENTIFICADOR: Nome dado a variável.
 
-Regras para atribuir um identificador à uma variável:
+Regras doo identificador da variável:
 - Podem começar com letra, $ ou _;
 - não podem começar com números;
 - é possível usar letras ou números;
@@ -127,7 +127,9 @@ Regras para atribuir um identificador à uma variável:
 
 Mostrando como abrir o node.js no terminal do vsc:
 
-- Abra um terminal, digite apenas "node" e dê enter.
+- Abra um terminal, clicando com o botão direito no campo "explorer" do menu e clique em "Open in Integrated Terminal".
+- Digite "node" na linha de comando e dê ENTER.
+
 
 Dicas de criação de nome de variáveis:
 
@@ -200,10 +202,17 @@ undefined
 ## MÓDULO B - AULA 6 - Tratamento de dados
 
 Q01. O que é uma variável?
-r: variável é um espaço ou memória alocada para armazenar algum tipo de dado.
+r: variável é um espaço de memória alocada para armazenar algum tipo de dado.
 
-Q02. Como declarar uma variável numérica inteira ou real usando JS.
+Q02. Como declarar uma variável numérica inteira ou real usando JS e node.js.
 r: 
+
+```javascript
+ var numeroInteiro = parseInt(window.alert('10'))
+var numeroFloat = parseFloat(window.alert('10.1'))
+
+```
+
 ```node.js
 > var numInt = 10
 undefined
@@ -347,8 +356,8 @@ r:
 Q02. Como fazer com que um número digitado em um prompt() possa ser usado em cálculos?
 r: transformando o tipo do valor das variáveis armazenadas de string para number.
 ```javascript
-    var numero1 = Number(window.document.prompt('informe numero 1'))
-    var numero2 = Number(window.document.prompt('informe numero 2'))
+    var numero1 = Number(window.document.prompt('informe numero 1')) // possível usar parseFloat ou parseInt tb
+    var numero2 = Number(window.document.prompt('informe numero 2')) // possível usar parseFloat ou parseInt tb
     var resultado = numero1 + numero2
     window.alert(`o resultado da operação é: ${resultado}.`)
 ```
@@ -613,12 +622,83 @@ true
 
  OPERADORES LÓGICOS:
 
- !
- &&
- ||
+ ! --> negação (eu quero uma caneta diferente de azul... qualquer cor menos azul)
+ && -- conjunção (eu quero uma caneta azul e uma vermelha... precisa ser essas duas, não apenas uma delas, mas as duas juntas)
+ || -- disjunção (eu quero uma caneta azul ou uma vermelha... pode ser ambas, pode ser apenas uma das duas, só não pode não ter nenhuma delas)
 
+ exemplos no node.js
 
+ ```node.js
+    > var a = 8
+undefined
+> var b = 15
+undefined
+> a > b
+> var a = 10
+undefined
+> var b = '10'
+> var a = 5
+undefined
+> var b = 8
+undefined
+> true && false
+false
+> true && true
+true
+> false && false
+false
+> false || false
+false
+> false || true
+true
+> true || false
+true
+> true || true
+true
+> a > b && b % 2 == 0
+false
+>
+ ```
+```javascript
 
+ ordem de precedência entre tipos de operadores
+ Operadores aritméticos:
+ +
+ -
+ *
+ /
+ **
+ Operadores relacionais:
+ // < maior que
+ // > menor que
+ // <= maior ou igual
+ // >= menor ou igual
+ // <== maior ou identico
+ // >== menor ou identico
+ Números lógicos:
+
+ exemplo:
+ var a = 5
+ var b = 8
+ então: > a > b && b % 2 == 0 (tem que dar false)
+
+ desmembrando:  0 == 0 ? (verdade) mas precisa ver a condição que vem antes do &&, se ela também for verdade, aí sim é verdade, porque o operador && precisa que ambos sejam verdade ou mentira.
+
+ continuando: 5 > 8 ? (falso)
+
+ ou seja: se as duas condições fossem true, aí o resultado da expressão era true, mas por ser o elemento de conjunção se um não for false, sempre será false.
+```
+
+### ORDEM DE PRECEDÊNCIA DE TODOS OPERADORES
+
+```javascript
+    //Aritméticos: 
+
+    1º () // parênteses
+    2º ** // expoentes
+    3º /,% // multiplicadores e divisores
+
+```
 
 
 
